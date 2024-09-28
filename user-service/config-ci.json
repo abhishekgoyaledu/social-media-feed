@@ -1,0 +1,30 @@
+{
+  "internalHostAndPort": "0.0.0.0:8011",
+  "mode": "dev",
+  "logger": {
+    "level": 5,
+    "tag": "user-service"
+  },
+  "mysql": {
+    "master": {
+      "dsn": "root:root@tcp(localhost:3306)/user_service?charset=utf8mb4&parseTime=true",
+      "max_idle_conn": 3,
+      "max_open_conn": 30,
+      "conn_max_lifetime_in_hours": 10
+    },
+    "slave": {
+      "dsn": "root:root@tcp(localhost:3306)/user_service?charset=utf8mb4&parseTime=true",
+      "max_idle_conn": 3,
+      "max_open_conn": 30,
+      "conn_max_lifetime_in_hours": 10
+    }
+  },
+  "redis": {
+    "host": "127.0.0.1",
+    "port": 6379,
+    "max_conn": 20,
+    "connect_timeout": 2,
+    "read_timeout": 2,
+    "write_timeout": 2
+  }
+}
